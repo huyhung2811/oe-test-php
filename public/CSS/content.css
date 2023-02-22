@@ -43,7 +43,7 @@ label {
     color: #333;
     border: 1px solid rgb(30, 38, 101);
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 2px;
     width: 100px;
     text-align: center;
 }
@@ -54,4 +54,51 @@ select option {
     text-align: center;
     
 }
+
+.card-row {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content:space-between; */
+}   
+
+.product-card {
+    width: 200px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 45px;
+    display: flex;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    color: #1e2665; 
+  }
+  
+  .product-info {
+    width: 100%;
+    text-align: left;
+  }
+
+  .product-info h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .product-info p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .product-info hr {
+    border: none;
+    border-top: 5px solid rgb(30, 39, 102);
+    background-color: #1e2665;
+    height: 3px;
+  }
+  .product-info button {
+    background-color: rgb(30, 39, 102);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 

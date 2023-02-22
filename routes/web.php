@@ -24,3 +24,8 @@ Route::get('/app', function () {
 
 Route::get('/{id}', [StoreController::class,'index'])->name('content');
 Route::get('/', [StoreController::class,'show']);
+
+
+
+
+

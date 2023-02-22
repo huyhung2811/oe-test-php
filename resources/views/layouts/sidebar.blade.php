@@ -14,7 +14,7 @@
     <nav>
         <div class="menu">
             <div class="name">
-                <a href="#">
+                <a href="{{route('content', ['id' => 1 ])}}">
                     Milk Tea Store
                 </a>
             </div>

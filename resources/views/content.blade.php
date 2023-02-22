@@ -6,19 +6,24 @@
 @endsection
 
 @section('content')
-<h1>Store {{$id}} Menu</h1>
+<h1>Store  Menu</h1>
+{{-- <h1>Store {{$name}} Menu</h1> --}}
   <div class="sort-container">
     <div class="filter">
       <button class="btn-filter">Filter</button>
     </div>
     <div class="sort">
-      <label for="sort">Sort by:</label>
-      <select id="sort">
+      <form action="{{route('content', ['id' => $id ])}}" method="get">
+        <label for="sort">Sort by:</label>
+      <select id="sort" name = "sort">
         <option value="name">Name</option>
         <option value="price">Price</option>
       </select>
+      <input type="submit" value="Sort" style="padding:9px; background-color:#e2e2e2">
+      </form>
     </div>
   </div>
+
     @php
         if(isset($product[0])){
           @endphp
@@ -29,9 +34,9 @@
             <div class="product-card">  
             <div class="product-info">
               <p>MT-0{{$item->id}}</p>
-    <h2 style="color: #1e2665;">{{$item->name}}</h2>
+    <h2 >{{$item->name}}</h2>
     <hr>
-    <h5 style="color: #1e2665">Toppings: </h5>
+    <h5 >Toppings: </h5>
     <p>{{$item->toppings}}</p>
     <h4 style="text-align: right">${{$item->price}}</h4>
     
@@ -44,52 +49,10 @@
           </div>
           @php
         } else {
-          echo "<h3> Khong co san pham ! </h3>";
+          echo "<h3 style=\"text-align: left; margin-top: 45px;margin-left:45px; color: rgb(30, 39, 102)\"> Khong co san pham ! </h3>";
         }
     @endphp
 
-
-<style>
-  .product-card {
-    width: 200px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 30px;
-    display: flex;
-    margin-left: 40px;
-  }
-  
-  .product-info {
-    width: 100%;
-    text-align: center;
-  }
-
-  .product-info h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .product-info p {
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
-  
-  .product-info button {
-    background-color: #1e2665;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  .card-row {
-  display: flex;
-  flex-wrap: wrap;
-  /* justify-content:space-between; */
-  
-}
-  </style>
 @endsection
 
 
