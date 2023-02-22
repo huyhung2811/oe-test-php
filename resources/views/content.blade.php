@@ -6,8 +6,7 @@
 @endsection
 
 @section('content')
-<h1>Store  Menu</h1>
-{{-- <h1>Store {{$name}} Menu</h1> --}}
+<h1>Store {{$id}} Menu</h1>
   <div class="sort-container">
     <div class="filter">
       <button class="btn-filter">Filter</button>
